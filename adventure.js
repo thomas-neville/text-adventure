@@ -39,10 +39,10 @@ var treasureY = 1;
 var treasureFound = false;
 
 // Get user's name
-var name = prompt("Welcome adventurer! What's your name?");
+var name = prompt("Welcome! You have just volunteered to help us find the light switch in this huge room. Unfortunately, the lights are turned off right now so you'll have to wander through the dark to find it and then turn it on. What's your name so we can yell at you if you bump into stuff?");
 console.log(name)
 
-alert("")
+alert("Hmm..." + name + ". Cool name I guess. How about you look for the light switch now?")
 
 while(!treasureFound) {
   var direction = prompt("Which direction would you like to go in? (north, south, east, or west)?")
@@ -68,7 +68,7 @@ while(!treasureFound) {
       userY = newY
       
     }else {
-      console.log("There is a forbidden mountain range in that direction, you cannot pass...")
+      console.log("Oh, that's a wall.")
     }
     
   }else if(direction == "east"){
@@ -79,7 +79,7 @@ while(!treasureFound) {
       userX = newX
       userY = newY
     }else {
-      console.log("There is a forbidden mountain range in that direction, you cannot pass...")
+      console.log("You almost knocked over the lamp. Keep looking...")
     }
     
   }else if(direction == "south"){
@@ -90,7 +90,7 @@ while(!treasureFound) {
       userX = newX
       userY = newY
     }else {
-      console.log("There is a forbidden mountain range in that direction, you cannot pass...")
+      console.log("Are you trying to leave? The light isn't on yet...")
     }
     
   }else if(direction == "west"){
@@ -101,7 +101,7 @@ while(!treasureFound) {
       userX = newX
       userY = newY
     }else {
-      console.log("There is a forbidden mountain range in that direction, you cannot pass...")
+      console.log("Sounds like you aren't even trying to find it. Turn around and keep looking...")
     }
     
   }else {
@@ -113,3 +113,5 @@ while(!treasureFound) {
     treasureFound = true
   }
 }
+
+alert("The lights are back on! Hurray! Okay you can leave now.")
