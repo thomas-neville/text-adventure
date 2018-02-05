@@ -40,7 +40,9 @@ var treasureFound = false;
 
 // Get user's name
 var name = prompt("Welcome adventurer! What's your name?");
+console.log(name)
 
+alert("")
 
 while(!treasureFound) {
   var direction = prompt("Which direction would you like to go in? (north, south, east, or west)?")
