@@ -1,4 +1,6 @@
+// Test for console log
 console.log("hello")
+
 /* 
 Setup
 var for treasure location
@@ -27,6 +29,7 @@ give option to retry
 //Define the size of the gameplay area
 var maxX = 2;
 var maxY = 2;
+
 // User starts at x0, y0 (bottom left of grid)
 var userX = 0;
 var userY = 0;
@@ -40,10 +43,14 @@ var treasureFound = false;
 
 // Get user's name
 var name = prompt("Welcome! You have just volunteered to help us find the light switch in this huge room. Unfortunately, the lights are turned off right now so you'll have to wander through the dark to find it and then turn it on. What's your name so we can yell at you if you bump into stuff?");
+
+// Log the user's name to the console
 console.log(name)
 
+// Confirm name and begin adventure
 alert("Hmm..." + name + ". Cool name I guess. How about you look for the light switch now?")
 
+// While loop for light switch not found
 while(!treasureFound) {
   var direction = prompt("Which direction would you like to go in? (north, south, east, or west)?")
   
@@ -110,8 +117,7 @@ while(!treasureFound) {
   
   // See if user location matches treasure
   if(userX == treasureX && userY == treasureY){
+    console.log("The lights are back on! They're kinda bright though. Us cats can see in the dark anyway. Okay you can leave now.")
     treasureFound = true
   }
 }
-
-alert("The lights are back on! Hurray! Okay you can leave now.")
