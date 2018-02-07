@@ -64,9 +64,9 @@ while(!treasureFound) {
     if(userX == 1 && userY == 2){
     document.getElementById("r2").appendChild(document.getElementById("dot"))
   }
-    if(userX == 2 && userY == 2){
-    document.getElementById("r3").appendChild(document.getElementById("dot"))
-  }
+  
+  // Room 3 is the final room, moving this line of code to the end
+  
     if(userX == 0 && userY == 1){
     document.getElementById("r4").appendChild(document.getElementById("dot"))
   }
@@ -147,7 +147,9 @@ while(!treasureFound) {
   }else {
     console.log("Please enter a real direction")
   }
-  
+  if(userX == 2 && userY == 2){
+    document.getElementById("r3").appendChild(document.getElementById("dot"))
+  }
   // See if user location matches treasure
   if(userX == treasureX && userY == treasureY){
     console.log("The lights are back on!")
