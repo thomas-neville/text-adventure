@@ -42,7 +42,7 @@ var treasureY = 2;
 var treasureFound = false;
 
 // Get user's name
-var name = prompt("Welcome! You have just volunteered to help us find the light switch in this dark room. Enter your name:);
+var name = prompt("Welcome! You have just volunteered to help us find the light switch in this dark room. Enter your name:");
 
 // Log the user's name to the console
 console.log(name)
@@ -55,6 +55,37 @@ while(!treasureFound) {
   // show user location on grid
   // set IDs for each "room"
   // append child to move blink div to room based on newX, newY
+  
+  // Start of location testing
+  // repeat this for each set of coords and change r-number
+    if(userX == 0 && userY == 2){
+    document.getElementById("r1").appendChild(document.getElementById("dot"))
+  }
+    if(userX == 1 && userY == 2){
+    document.getElementById("r2").appendChild(document.getElementById("dot"))
+  }
+    if(userX == 2 && userY == 2){
+    document.getElementById("r3").appendChild(document.getElementById("dot"))
+  }
+    if(userX == 0 && userY == 1){
+    document.getElementById("r4").appendChild(document.getElementById("dot"))
+  }
+    if(userX == 1 && userY == 1){
+    document.getElementById("r5").appendChild(document.getElementById("dot"))
+  }
+    if(userX == 2 && userY == 1){
+    document.getElementById("r6").appendChild(document.getElementById("dot"))
+  }
+    if(userX == 0 && userY == 0){
+    document.getElementById("r7").appendChild(document.getElementById("dot"))
+  }  
+  if(userX == 1 && userY == 0){
+    document.getElementById("r8").appendChild(document.getElementById("dot"))
+  }  
+  if(userX == 2 && userY == 0){
+    document.getElementById("r9").appendChild(document.getElementById("dot"))
+  }
+  // End of location testing
   
   var direction = prompt("Which direction would you like to go in? (up, down, left, or right)?")
   
