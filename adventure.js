@@ -52,6 +52,10 @@ alert("Thanks," + name + ". How about you look for the light switch now?")
 
 // While loop for light switch not found
 while(!treasureFound) {
+  // show user location on grid
+  // set IDs for each "room"
+  // append child to move blink div to room based on newX, newY
+  
   var direction = prompt("Which direction would you like to go in? (up, down, left, or right)?")
   
   console.log(direction);
