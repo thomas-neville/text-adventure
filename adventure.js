@@ -36,23 +36,23 @@ var userY = 0;
 
 // Hide the treasure, with x and y values
 var treasureX = 2;
-var treasureY = 1;
+var treasureY = 2;
 
 // Flag that controls loop
 var treasureFound = false;
 
 // Get user's name
-var name = prompt("Welcome! You have just volunteered to help us find the light switch in this huge room. Unfortunately, the lights are turned off right now so you'll have to wander through the dark to find it and then turn it on. What's your name so we can yell at you if you bump into stuff?");
+var name = prompt("Welcome! You have just volunteered to help us find the light switch in this dark room. Enter your name:);
 
 // Log the user's name to the console
 console.log(name)
 
 // Confirm name and begin adventure
-alert("Hmm..." + name + ". Cool name I guess. How about you look for the light switch now?")
+alert("Thanks," + name + ". How about you look for the light switch now?")
 
 // While loop for light switch not found
 while(!treasureFound) {
-  var direction = prompt("Which direction would you like to go in? (north, south, east, or west)?")
+  var direction = prompt("Which direction would you like to go in? (up, down, left, or right)?")
   
   console.log(direction);
   
@@ -60,13 +60,11 @@ while(!treasureFound) {
   var newX
   var newY
   
-  // see what new user location should be
-  
-  // check if new user location is valid
-  
+  // see what new user location should be  
+  // check if new user location is valid  
   // check if new user location is treasure
   
-  if(direction == "north") {
+  if(direction == "up") {
     newX = userX
     newY = userY + 1
     // neither value < 0, neither is > max
@@ -78,7 +76,7 @@ while(!treasureFound) {
       console.log("Oh, that's a wall.")
     }
     
-  }else if(direction == "east"){
+  }else if(direction == "right"){
     newX = userX + 1
     newY = userY
      // neither value < 0, neither is > max
@@ -89,7 +87,7 @@ while(!treasureFound) {
       console.log("You almost knocked over the lamp. Keep looking...")
     }
     
-  }else if(direction == "south"){
+  }else if(direction == "down"){
     newX = userX
     newY = userY - 1
      // neither value < 0, neither is > max
@@ -100,7 +98,7 @@ while(!treasureFound) {
       console.log("Are you trying to leave? The light isn't on yet...")
     }
     
-  }else if(direction == "west"){
+  }else if(direction == "left"){
     newX = userX - 1
     newY = userY
      // neither value < 0, neither is > max
@@ -108,7 +106,7 @@ while(!treasureFound) {
       userX = newX
       userY = newY
     }else {
-      console.log("Sounds like you aren't even trying to find it. Turn around and keep looking...")
+      console.log("Another wall... Turn around and keep looking...")
     }
     
   }else {
@@ -117,7 +115,7 @@ while(!treasureFound) {
   
   // See if user location matches treasure
   if(userX == treasureX && userY == treasureY){
-    console.log("The lights are back on! They're kinda bright though. Us cats can see in the dark anyway. Okay you can leave now.")
+    console.log("The lights are back on!")
     treasureFound = true
   }
 }
