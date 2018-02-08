@@ -30,7 +30,6 @@ div.room {
   height: 1rem;
   background-color: royalblue;
   border-radius: 1rem;
-  
   animation: blink 1.2s infinite linear;
 }
 
