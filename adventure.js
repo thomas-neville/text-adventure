@@ -58,31 +58,31 @@ while(!switchFound) {
   // move dot to current room location
   // append child to move ID blink div to room based on newX, newY
   
-    if(userX == 0 && userY == 2){
+  if(userX == 0 && userY == 2){
     document.getElementById("r1").appendChild(document.getElementById("dot"))
   }
-    if(userX == 1 && userY == 2){
+  if(userX == 1 && userY == 2){
     document.getElementById("r2").appendChild(document.getElementById("dot"))
   }
   
   // Room 3 is the final room, moving this line of code to the end
   
-    if(userX == 0 && userY == 1){
+  if(userX == 0 && userY == 1){
     document.getElementById("r4").appendChild(document.getElementById("dot"))
   }
-    if(userX == 1 && userY == 1){
+  if(userX == 1 && userY == 1){
     document.getElementById("r5").appendChild(document.getElementById("dot"))
   }
-    if(userX == 2 && userY == 1){
+  if(userX == 2 && userY == 1){
     document.getElementById("r6").appendChild(document.getElementById("dot"))
   }
-    if(userX == 0 && userY == 0){
+  if(userX == 0 && userY == 0){
     document.getElementById("r7").appendChild(document.getElementById("dot"))
   }  
-    if(userX == 1 && userY == 0){
+  if(userX == 1 && userY == 0){
     document.getElementById("r8").appendChild(document.getElementById("dot"))
   }  
-    if(userX == 2 && userY == 0){
+  if(userX == 2 && userY == 0){
     document.getElementById("r9").appendChild(document.getElementById("dot"))
   }
   // End of location testing
@@ -130,7 +130,7 @@ while(!switchFound) {
       userX = newX
       userY = newY
     }else {
-      console.log("Are you trying to leave? The light isn't on yet...")
+      console.log("Don't leave! The light isn't on yet...")
     }
     
   }else if(direction == "left"){
